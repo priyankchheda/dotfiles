@@ -31,6 +31,8 @@
 		".svn",
 		".git",
 		".hg",
+		"__pycache__",
+		"*/__pycache__",
 		"CVS"
 	],
 	"font_face": "Fira Code",
@@ -52,9 +54,8 @@
 	"save_on_focus_lost": true,
 	"smart_indent": true,
 	"tab_size": 4,
-    "translate_tabs_to_spaces": true,
+    	"translate_tabs_to_spaces": true,
 	"theme": "Adaptive.sublime-theme",
 	"use_tab_stops": true,
 	"word_wrap": true
 }
-
