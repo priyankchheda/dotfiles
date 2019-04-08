@@ -4,6 +4,7 @@ set tabstop=4
 set expandtab
 set shiftwidth=4
 set softtabstop=4
+set hlsearch
 set number
 set colorcolumn=80
 set t_Co=256
