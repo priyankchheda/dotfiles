@@ -41,6 +41,10 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" Clipboard
+noremap <Leader>y "*y
+noremap <Leader>p "*p
+
 " Highlight Unnecessary White Space
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
