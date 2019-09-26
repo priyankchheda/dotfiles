@@ -1,0 +1,23 @@
+{
+    //editor settings
+    "editor.fontSize": 12,
+    "editor.fontFamily": "Andale Mono",
+    "editor.formatOnSave": true,
+    "editor.rulers": [
+        80
+    ],
+    "debug.console.fontFamily": "Andale Mono",
+    "debug.console.fontSize": 12,
+    "terminal.integrated.fontFamily": "Andale Mono",
+    "terminal.integrated.fontSize": 12,
+    
+    // python settings
+    "python.pythonPath": "/usr/local/bin/python3",
+    "python.formatting.provider": "autopep8",
+    
+    //zen mode settings
+    "zenMode.fullScreen": false,
+    "zenMode.centerLayout": false,
+    "zenMode.hideLineNumbers": false,
+    "zenMode.hideTabs": false
+}
