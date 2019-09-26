@@ -14,6 +14,7 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # For Dark Background
 export PS1='\n$(virtualenv_info)\e[0;36m[\d \T]\e[m \e[0;32m\u@\h\e[m: \w \e[1;33m$(__git_ps1 "(%s) ")\e[m\n$ '
+# export PS1='\n$(virtualenv_info)\e[1;37m[\d \T]\e[m \e[1;37m\u@\h\e[m: \w \e[1;37m$(__git_ps1 "(%s) ")\e[m\n$ '
 
 # For Light Background
 # export PS1='\n$(virtualenv_info)[\d \T] \u@\h: \w \e[1;33m$(__git_ps1 "(%s) ")\e[m\n$ '
