@@ -1,4 +1,5 @@
 " General VIM sSettings
+set encoding=utf-8
 set smartindent
 set tabstop=4
 set expandtab
@@ -8,13 +9,17 @@ set hlsearch
 set number
 set colorcolumn=80
 set t_Co=256
-
+set backspace=indent,eol,start
 let mapleader=','
 
 " Plugins
 call plug#begin('~/.vim/plugged')
 Plug 'kien/ctrlp.vim'
+Plug 'ycm-core/YouCompleteMe'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plug 'SirVer/ultisnips'
+Plug 'junegunn/limelight.vim'
+Plug 'mattn/emmet-vim'
 Plug 'irrationalistic/vim-tasks'
 Plug 'altercation/vim-colors-solarized'
 Plug 'vim-python/python-syntax'
@@ -59,3 +64,8 @@ endif
 
 " Golang settings
 let g:go_fmt_command = "goimports"
+
+" YouCompleteMe settings
+let g:ycm_python_binary_path = "python3"
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_min_num_of_chars_for_completion = 1
