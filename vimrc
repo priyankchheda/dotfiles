@@ -12,6 +12,13 @@ set t_Co=256
 set backspace=indent,eol,start
 let mapleader=','
 
+" Smart search while searching
+set ignorecase
+set smartcase
+
+" Show partial vim command
+set showcmd
+
 " Plugins
 call plug#begin('~/.vim/plugged')
 Plug 'kien/ctrlp.vim'
@@ -53,6 +60,11 @@ noremap <Leader>p "*p
 " Highlight Unnecessary White Space
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
+
+" Netrw File Explorer
+let g:netrw_liststyle=3
+let g:netrw_banner=0
+let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 
 " MacVim GUI setting
 if has("gui_macvim")
