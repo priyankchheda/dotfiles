@@ -1,12 +1,11 @@
 # Configuration-Files
 
-Create soft link to repo configuration files
-```
-ln -s bash_profile ~/.bash_profile
-ln -s tmux.conf ~/.tmux.conf
-ln -s vimrc ~/.vimrc
+git clone https://github.com/priyankchheda/dotfiles.git ~/.dotfiles
+
+ln -sv ~/.dotfiles/tmux.conf ~/.tmux.conf
+ln -sv ~/.dotfiles/vimrc ~/.vimrc
+ln -sv ~/.dotfiles/bash_profile ~/.bash_profile
 
 source /etc/bash_completion.d/git
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
-```
