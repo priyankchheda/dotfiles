@@ -1,11 +1,11 @@
-" Vimrc file
-" Maintainer: Priyank Chheda <p.chheda29@gmail.com>
+" vimrc file
+" maintainer: priyank chheda <p.chheda29@gmail.com>
 
 
 " importing default settings
 source $VIMRUNTIME/defaults.vim
 
-" General VIM Settings
+" general vim settings
 set encoding=utf-8
 set nocompatible
 
@@ -24,7 +24,7 @@ set smartcase
 filetype plugin on
 let mapleader=','
 
-" VimGrepSearch
+" vimgrep search
 set path+=**
 set wildmenu
 set wildignore+=**/node_modules/**
@@ -36,44 +36,51 @@ set wildignore+=.DS_Store,.git
 set splitbelow
 set splitright
 
-" Theme Setting
-syntax enable
+" plugins
+call plug#begin('~/.vim/plugged')
+Plug 'NLKNguyen/papercolor-theme'
+call plug#end()
 
-" Tab Shortcuts Key Binding
-nnoremap tn :tabnew<Space>
-nnoremap tk :tabnext<CR>
-nnoremap tj :tabprev<CR>
-nnoremap th :tabfirst<CR>
-nnoremap tl :tablast<CR>
+" theme setting
+syntax enable
+set background=light
+colorscheme PaperColor
+
+" tab shortcuts key binding
+nnoremap tn :tabnew<space>
+nnoremap tk :tabnext<cr>
+nnoremap tj :tabprev<cr>
+nnoremap th :tabfirst<cr>
+nnoremap tl :tablast<cr>
 
 " Split Window Navigation Key Binding
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+nnoremap <c-j> <c-w><c-j>
+nnoremap <c-k> <c-w><c-k>
+nnoremap <c-l> <c-w><c-l>
+nnoremap <c-h> <c-w><c-h>
 
-" Clipboard
-noremap <Leader>y "*y
-noremap <Leader>p "*p
+" clipboard
+noremap <leader>y "*y
+noremap <leader>p "*p
 
-" Buffer Navigation
-nnoremap <Leader>l :ls<cr>:b
-nnoremap <Leader>z <C-^>
+" buffer navigation
+nnoremap <leader>l :ls<cr>:b
+nnoremap <leader>z <c-^>
 
-" Grep Search
-nnoremap <Leader>wf :grep -FIrni <cword> %
-nnoremap <Leader>ff :grep -FIrni '<C-R>"' .
-nnoremap <Leader>cf :grep -Fni '<C-R>"' %
+" grep search
+nnoremap <leader>wf :grep -FIrni <cword> %
+nnoremap <leader>ff :grep -FIrni '<c-r>"' .
+nnoremap <leader>cf :grep -Fni '<c-r>"' %
 
-" QuickFix
-nnoremap <Leader>1 :cprevious<cr>
-nnoremap <Leader>2 :cnext<cr>
+" quickfix
+nnoremap <leader>1 :cprevious<cr>
+nnoremap <leader>2 :cnext<cr>
 
-" Highlight Unnecessary White Space
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
+" highlight unnecessary white space
+highlight extrawhitespace ctermbg=red guibg=red
+match extrawhitespace /\s\+$/
 
-" Netrw File Explorer
+" netrw file explorer
 let g:netrw_liststyle=3
 let g:netrw_banner=0
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
