@@ -1,4 +1,3 @@
-alias notes='vim notes/'
 function virtualenv_info() {
     if [[ -n "$VIRTUAL_ENV" ]]; then
         venv=`basename $VIRTUAL_ENV`

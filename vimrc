@@ -63,6 +63,9 @@ nnoremap <c-h> <c-w><c-h>
 noremap <leader>y "*y
 noremap <leader>p "*p
 
+" copy via less
+nnoremap <leader>r :!less %<cr>
+
 " buffer navigation
 nnoremap <leader>l :ls<cr>:b
 nnoremap <leader>z <c-^>
