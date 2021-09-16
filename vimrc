@@ -21,6 +21,10 @@ set hlsearch
 set ignorecase
 set smartcase
 
+set wrap
+set linebreak
+set nolist
+
 filetype plugin on
 let mapleader=','
 
@@ -39,6 +43,8 @@ set splitright
 " plugins
 call plug#begin('~/.vim/plugged')
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " theme setting
@@ -67,17 +73,35 @@ noremap <leader>p "*p
 nnoremap <leader>r :!less %<cr>
 
 " buffer navigation
-nnoremap <leader>l :ls<cr>:b
+nnoremap <leader>l :Buffers<cr>
 nnoremap <leader>z <c-^>
 
-" grep search
-nnoremap <leader>wf :grep -FIrni <cword> %
-nnoremap <leader>ff :grep -FIrni '<c-r>"' .
-nnoremap <leader>cf :grep -Fni '<c-r>"' %
+" comment / uncomment
+nnoremap <leader>/ :s/^/# /<cr>
+nnoremap <leader>\ :s/^# //<cr>
+vnoremap <leader>/ :s/^/# /<cr>
+vnoremap <leader>\ :s/^# //<cr>
+
+" fzf search
+nnoremap <leader>p :GFiles<cr>
+nnoremap <leader>f :Rg! 
 
 " quickfix
 nnoremap <leader>1 :cprevious<cr>
 nnoremap <leader>2 :cnext<cr>
+
+" set paste toggle
+function! TogglePaste()
+    if(&paste == 0)
+        set paste
+        echo "Paste Mode Enabled"
+    else
+        set nopaste
+        echo "Paste Mode Disabled"
+    endif
+endfunction
+
+nnoremap <leader>; :call TogglePaste()<cr>
 
 " highlight unnecessary white space
 highlight extrawhitespace ctermbg=red guibg=red
