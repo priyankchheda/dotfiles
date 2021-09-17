@@ -77,14 +77,16 @@ nnoremap <leader>l :Buffers<cr>
 nnoremap <leader>z <c-^>
 
 " comment / uncomment
-nnoremap <leader>/ :s/^/# /<cr>
-nnoremap <leader>\ :s/^# //<cr>
-vnoremap <leader>/ :s/^/# /<cr>
-vnoremap <leader>\ :s/^# //<cr>
+" nnoremap <leader>/ :s/^/# /<cr>
+nnoremap <leader>/ :normal I# <cr>
+nnoremap <leader>\ :normal ^xx<cr>
+vnoremap <leader>/ :normal I# <cr>
+vnoremap <leader>\ :normal ^xx<cr>
 
-" fzf search
+" fzf settings
 nnoremap <leader>p :GFiles<cr>
 nnoremap <leader>f :Rg! 
+let g:fzf_preview_window = ['up:70%']
 
 " quickfix
 nnoremap <leader>1 :cprevious<cr>
