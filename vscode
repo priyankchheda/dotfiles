@@ -1,11 +1,8 @@
 {
-    // window settings
-    "window.nativeTabs": true,
-
-    // workbench settings
-    "workbench.editor.enablePreview": false,
-    "workbench.editor.wrapTabs": false,
+    // workbench setting
     "workbench.colorTheme": "Default Light Modern",
+    "workbench.editor.wrapTabs": false,
+    "workbench.editor.enablePreview": false,
 
     // editor setting
     "editor.fontFamily": "SF Mono",
@@ -17,9 +14,6 @@
     "editor.renderWhitespace": "none",
     "editor.formatOnSave": false,
     "editor.wordWrap": "on",
-
-    // diff editor
-    "diffEditor.ignoreTrimWhitespace": false,
     "diffEditor.renderSideBySide": false,
 
     // debug console setting
@@ -34,12 +28,11 @@
     "terminal.integrated.fontWeightBold": "500",
     "terminal.integrated.fontWeight": "500",
     "terminal.integrated.drawBoldTextInBrightColors": false,
+    "terminal.integrated.scrollback": 10000,
 
-    // zen mode settings
-    "zenMode.fullScreen": false,
-    "zenMode.centerLayout": false,
-    "zenMode.hideLineNumbers": false,
-    "zenMode.hideTabs": false,
+    // window setting
+    "window.nativeFullScreen": false,
+    "window.nativeTabs": true,
 
     // markdown settings
     "markdown.preview.fontSize": 15,
@@ -57,6 +50,8 @@
         "editor.formatOnSave": false,
     },
 
-    // trailing space extension
+    // extensions
     "trailing-spaces.trimOnSave": false,
+    "thunder-client.requestLayout": "Top/Bottom",
+    "diffEditor.ignoreTrimWhitespace": false,
 }
